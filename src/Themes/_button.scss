@@ -1,0 +1,90 @@
+@import 'Themes/_variables.scss';
+
+.a-btnCta {
+  padding: 1.7em 3.6em;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  position: relative;
+  overflow: hidden;
+
+  // shine effect on all the buttons
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba($color-white, 0.3);
+    width: 45px;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    transform: skewX(-40deg) translateX(-70px);
+  }
+}
+
+// shine animation on all the buttons triggered when scrolling
+.-shineAnimation {
+  .a-btnCta::before {
+    transform: skewX(-40deg) translateX(300px);
+  }
+}
+
+.-btnTransparent {
+  border: 1px solid $color-white;
+  background-color: transparent;
+  &:link,
+  &:visited {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    color: $color-gray-dark;
+  }
+}
+
+.-btnBlack {
+  border: 1px solid $color-gray-dark;
+  background-color: $color-gray-dark;
+
+  &:link,
+  &:visited {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    color: $color-gray-dark;
+  }
+}
+
+.a-btnSubmit {
+  padding: 1.7em 0;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: $color-white;
+  cursor: pointer;
+
+  border: 1px solid $color-gray-dark;
+  background-color: $color-gray-dark;
+
+  margin-top: 3px;
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    color: $color-gray-dark;
+    outline: none;
+  }
+}

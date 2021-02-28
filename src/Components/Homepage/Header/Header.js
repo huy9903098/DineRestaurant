@@ -11,6 +11,7 @@ export default function Header() {
         Experience our seasonal menu in beautiful country surroundings. Eat the
         freshest produce from the comfort of our farmhouse.
       </p>
+      <a class="a-btnCta -btnTransparent">Book a table</a>
     </header>
   );
 }
