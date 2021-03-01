@@ -1,0 +1,51 @@
+@import 'Themes/_typography.scss';
+@import 'Themes/_mixins.scss';
+@import 'Themes/_button.scss';
+@import 'Themes/_variables.scss';
+
+.footer {
+  background-color: $color-gray-dark;
+
+  padding-top: 81px;
+  padding-bottom: 81px;
+
+  font-size: 14px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include small-tablet {
+    padding: 64px 5%;
+
+    text-align: left;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    row-gap: 37px;
+  }
+
+  @include small-desktop {
+    grid-template-columns: 26.5% 33% 41.5%;
+    grid-template-rows: min-content;
+    grid-auto-flow: dense;
+    padding: 79px $padding-desktop;
+  }
+
+  .m-footer__address {
+    margin-top: 31px;
+    margin-bottom: 35px;
+    @include small-tablet {
+      margin: 0;
+    }
+  }
+  .m-footer__openTimes {
+    @include small-tablet {
+      grid-column: 2/3;
+    }
+    @include small-desktop {
+      grid-column: 3/4;
+    }
+  }
+}

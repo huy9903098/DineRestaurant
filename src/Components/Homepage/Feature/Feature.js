@@ -6,6 +6,7 @@ import enjoyableMobile from 'Images/homepage/enjoyable-place-mobile.jpg';
 import enjoyableMobile2 from 'Images/homepage/enjoyable-place-mobile@2x.jpg';
 import enjoyableTablet from 'Images/homepage/enjoyable-place-tablet.jpg';
 import enjoyableTablet2 from 'Images/homepage/enjoyable-place-tablet@2x.jpg';
+
 import localMobile from 'Images/homepage/locally-sourced-mobile.jpg';
 import localMobile2 from 'Images/homepage/locally-sourced-mobile@2x.jpg';
 import localTablet from 'Images/homepage/locally-sourced-tablet.jpg';

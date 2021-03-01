@@ -4,7 +4,7 @@
 @import 'Themes/_variables.scss';
 
 .features {
-  @media only screen and (min-width: 48em) {
+  @include small-tablet {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 40px;
@@ -15,14 +15,11 @@
     background-position: top 197px left -517px, bottom right -511px;
   }
 
-  @media only screen and (min-width: 80em) {
+  @include small-desktop {
     background-image: url('../../../Images/patterns/pattern-curve-top-right.svg'),
       url('../../../Images/patterns/pattern-curve-top-left.svg');
     background-repeat: no-repeat;
     background-position: top 322px left, bottom 124px right;
-  }
-
-  @media only screen and (min-width: 80em) {
     padding-right: $padding-desktop;
     padding-left: $padding-desktop;
   }
@@ -33,7 +30,7 @@
   }
 
   .m-feature {
-    @media only screen and (min-width: 80em) {
+    @include small-desktop {
       display: flex;
       flex-direction: row-reverse;
       margin-top: 116px;
@@ -60,12 +57,12 @@
         margin-top: 22px;
         margin-bottom: 14px;
 
-        @media only screen and (min-width: 48em) {
+        @include small-tablet {
           width: 50%;
           margin: 27px auto 14px auto;
         }
 
-        @media only screen and (min-width: 80em) {
+        @include small-desktop {
           margin: 171px 0 16px 0;
           width: 85%;
         }
@@ -75,7 +72,7 @@
           display: block;
           width: 100%;
           height: 65px;
-          @media only screen and (min-width: 80em) {
+          @include small-desktop {
             height: 87px;
           }
         }
@@ -84,26 +81,26 @@
       .paragraph {
         margin-bottom: 80px; //goes perfectly as bottom margin of the section
 
-        @media only screen and (min-width: 48em) {
+        @include small-tablet {
           width: 60%;
           margin-left: auto;
           margin-right: auto;
         }
 
-        @media only screen and (min-width: 80em) {
+        @include small-desktop {
           margin: 0;
           width: 80%;
         }
       }
 
-      @media only screen and (min-width: 80em) {
+      @include small-desktop {
         display: flex;
         flex-direction: column;
       }
     }
 
     &:last-child .m-feature__imgBox {
-      @media only screen and (min-width: 48em) {
+      @include small-tablet {
         &::after {
           content: url('../../../Images/patterns/pattern-lines.svg');
           display: block;
@@ -115,7 +112,7 @@
           @media only screen and (min-width: 55em) {
             right: -25px;
           }
-          @media only screen and (min-width: 80em) {
+          @include small-desktop {
             right: -116px;
             top: 282px;
           }
@@ -125,7 +122,7 @@
 
     &:first-child {
       margin-top: -73px;
-      @media only screen and (min-width: 48em) {
+      @include small-tablet {
         margin-top: -97px;
 
         .paragraph {
@@ -135,7 +132,7 @@
         }
       }
 
-      @media only screen and (min-width: 80em) {
+      @include small-desktop {
         margin-top: -72px;
         .m-feature__textBox {
           padding-left: 122px;

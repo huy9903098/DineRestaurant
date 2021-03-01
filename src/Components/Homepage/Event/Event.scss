@@ -1,0 +1,209 @@
+@import 'Themes/_typography.scss';
+@import 'Themes/_mixins.scss';
+@import 'Themes/_button.scss';
+@import 'Themes/_variables.scss';
+.events {
+  padding-top: 81px;
+  padding-bottom: 124px;
+
+  @media only screen and (min-width: 48em) {
+    padding-top: 120px;
+    padding-bottom: 119px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    background-image: url('../../../Images/patterns/pattern-curve-top-right.svg');
+    background-repeat: no-repeat;
+    background-position: top left -517px;
+  }
+  @media only screen and (min-width: 80em) {
+    background-position: top left -350px;
+    padding: 161px $padding-desktop;
+    display: flex;
+  }
+
+  .m-events__imgBox {
+    width: 100%;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media only screen and (min-width: 48em) {
+      &::before {
+        content: url('../../../Images/patterns/pattern-lines.svg');
+        display: block;
+        position: absolute;
+        height: 76px;
+        width: 160px;
+        top: -38px;
+        left: 0;
+      }
+    }
+
+    @media only screen and (min-width: 55em) {
+      width: 655px;
+    }
+    @media only screen and (min-width: 80em) {
+      flex: 0 0 48.7%;
+
+      &::before {
+        top: -39px;
+        left: -41px;
+      }
+    }
+
+    img {
+      box-shadow: $blured-shadow;
+      display: none;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 100%;
+      max-height: 100%;
+
+      @media only screen and (min-width: 48em) {
+        width: 83%;
+      }
+      @media only screen and (min-width: 80em) {
+        width: 100%;
+      }
+    }
+
+    .-visible {
+      display: block;
+    }
+  }
+
+  .m-events__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (min-width: 80em) {
+      margin-left: 124px;
+      justify-content: flex-start;
+    }
+  }
+
+  .m-events__nav {
+    order: -1;
+    margin-top: 45px;
+    margin-bottom: 18px;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba($color-brown-gray, 0.5);
+
+    @media only screen and (min-width: 48em) {
+      margin-top: 52px;
+      margin-bottom: 31px;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media only screen and (min-width: 55em) {
+      justify-content: space-around;
+    }
+
+    @media only screen and (min-width: 80em) {
+      flex-direction: column;
+      order: 2;
+
+      margin-left: -22px;
+      margin-top: 10px;
+    }
+
+    @media only screen and (min-width: 90em) {
+      margin-top: 52px;
+    }
+
+    .m-events__item {
+      padding: 11.5px 0;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 48px;
+        margin: 5px auto 0 auto;
+        background-color: transparent;
+      }
+
+      @media only screen and (min-width: 48em) {
+        &::after {
+          margin: 15px auto 0 auto;
+        }
+      }
+      @media only screen and (min-width: 80em) {
+        padding: 0 0 28px 0;
+
+        &::after {
+          margin: 0;
+          position: absolute;
+          left: -125px;
+          top: 9px;
+          width: 91px;
+        }
+      }
+    }
+
+    .-active {
+      color: rgba($color-brown-gray, 1);
+      &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 48px;
+        margin: 5px auto 0 auto;
+        background-color: $color-brown;
+      }
+      @media only screen and (min-width: 48em) {
+        &::after {
+          margin: 15px auto 0 auto;
+        }
+      }
+      @media only screen and (min-width: 80em) {
+        &::after {
+          margin: 0;
+          position: absolute;
+          left: -125px;
+          top: 9px;
+          width: 91px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .-h2 {
+    @media only screen and (min-width: 80em) {
+      margin-top: 65px;
+    }
+  }
+
+  .paragraph {
+    margin-top: 15px;
+    margin-bottom: 31px;
+    @media only screen and (min-width: 48em) {
+      margin: 15px auto 31px auto;
+      width: 67%;
+    }
+    @media only screen and (min-width: 80em) {
+      margin: 15px 0 30px 0;
+      width: 100%;
+    }
+  }
+
+  .a-btnCta {
+    @media only screen and (min-width: 80em) {
+      margin-bottom: 30px;
+      align-self: flex-start;
+    }
+  }
+}

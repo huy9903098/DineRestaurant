@@ -1,12 +1,10 @@
 import './App.scss';
-import Header from './Components/Homepage/Header/Header';
-import Feature from './Components/Homepage/Feature/Feature';
+import Homepage from './Components/Homepage/index';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Feature />
+      <Homepage />
     </div>
   );
 }
