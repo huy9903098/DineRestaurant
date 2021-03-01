@@ -1,12 +1,10 @@
-@import 'Themes/_typography.scss';
 @import 'Themes/_mixins.scss';
-@import 'Themes/_button.scss';
 @import 'Themes/_variables.scss';
 .events {
   padding-top: 81px;
   padding-bottom: 124px;
 
-  @media only screen and (min-width: 48em) {
+  @include small-tablet {
     padding-top: 120px;
     padding-bottom: 119px;
     padding-left: 5%;
@@ -16,7 +14,7 @@
     background-repeat: no-repeat;
     background-position: top left -517px;
   }
-  @media only screen and (min-width: 80em) {
+  @include small-desktop {
     background-position: top left -350px;
     padding: 161px $padding-desktop;
     display: flex;
@@ -28,7 +26,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    @media only screen and (min-width: 48em) {
+    @include small-tablet {
       &::before {
         content: url('../../../Images/patterns/pattern-lines.svg');
         display: block;
@@ -43,7 +41,7 @@
     @media only screen and (min-width: 55em) {
       width: 655px;
     }
-    @media only screen and (min-width: 80em) {
+    @include small-desktop {
       flex: 0 0 48.7%;
 
       &::before {
@@ -60,10 +58,10 @@
       max-width: 100%;
       max-height: 100%;
 
-      @media only screen and (min-width: 48em) {
+      @include small-tablet {
         width: 83%;
       }
-      @media only screen and (min-width: 80em) {
+      @include small-desktop {
         width: 100%;
       }
     }
@@ -79,7 +77,7 @@
     align-items: center;
     justify-content: center;
 
-    @media only screen and (min-width: 80em) {
+    @include small-desktop {
       margin-left: 124px;
       justify-content: flex-start;
     }
@@ -97,7 +95,7 @@
     text-transform: uppercase;
     color: rgba($color-brown-gray, 0.5);
 
-    @media only screen and (min-width: 48em) {
+    @include small-tablet {
       margin-top: 52px;
       margin-bottom: 31px;
       width: 95%;
@@ -109,7 +107,7 @@
       justify-content: space-around;
     }
 
-    @media only screen and (min-width: 80em) {
+    @include small-desktop {
       flex-direction: column;
       order: 2;
 
@@ -135,12 +133,12 @@
         background-color: transparent;
       }
 
-      @media only screen and (min-width: 48em) {
+      @include small-tablet {
         &::after {
           margin: 15px auto 0 auto;
         }
       }
-      @media only screen and (min-width: 80em) {
+      @include small-desktop {
         padding: 0 0 28px 0;
 
         &::after {
@@ -163,12 +161,12 @@
         margin: 5px auto 0 auto;
         background-color: $color-brown;
       }
-      @media only screen and (min-width: 48em) {
+      @include small-tablet {
         &::after {
           margin: 15px auto 0 auto;
         }
       }
-      @media only screen and (min-width: 80em) {
+      @include small-desktop {
         &::after {
           margin: 0;
           position: absolute;
@@ -182,7 +180,7 @@
   }
 
   .-h2 {
-    @media only screen and (min-width: 80em) {
+    @include small-desktop {
       margin-top: 65px;
     }
   }
@@ -190,18 +188,18 @@
   .paragraph {
     margin-top: 15px;
     margin-bottom: 31px;
-    @media only screen and (min-width: 48em) {
+    @include small-tablet {
       margin: 15px auto 31px auto;
       width: 67%;
     }
-    @media only screen and (min-width: 80em) {
+    @include small-desktop {
       margin: 15px 0 30px 0;
       width: 100%;
     }
   }
 
   .a-btnCta {
-    @media only screen and (min-width: 80em) {
+    @include small-desktop {
       margin-bottom: 30px;
       align-self: flex-start;
     }
