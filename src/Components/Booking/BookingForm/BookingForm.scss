@@ -1,0 +1,265 @@
+@import 'Themes/_mixins.scss';
+@import 'Themes/_variables.scss';
+
+.bookingForm {
+  padding-top: 56px;
+  padding-bottom: 84px;
+
+  @include small-tablet {
+    margin-top: -20px;
+    padding: 0 15% 84px 15%;
+  }
+  @include small-desktop {
+    margin: 0;
+    padding: 0;
+    height: 320px;
+    background-image: url('../../../Images/patterns/pattern-curve-bottom-right.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  .form {
+    box-shadow: $blured-shadow;
+    padding: 27px 10% 32px 10%;
+    margin-top: -194px;
+    background-color: $color-white;
+
+    font-size: 18px;
+
+    @include small-tablet {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -230px;
+      padding: 27px 54px 32px 54px;
+      width: 538px;
+    }
+    @include small-desktop {
+      margin: 0;
+      padding: 38px 54px 32px 54px;
+      position: absolute;
+      top: 258px;
+      right: 11.5%;
+
+      &::after {
+        content: url('../../../Images/patterns/pattern-lines.svg');
+        display: block;
+        position: absolute;
+        left: -82px;
+        bottom: -38px;
+        width: 160px;
+        height: 76px;
+        z-index: -1;
+      }
+    }
+
+    &__group {
+      position: relative;
+
+      small {
+        color: $color-error;
+
+        font-size: 10px;
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        visibility: hidden;
+      }
+
+      &.error input::placeholder {
+        color: $color-error;
+      }
+      &.error small {
+        visibility: visible;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+
+      &-date {
+        margin-top: 37px;
+      }
+      &-time {
+        margin-top: 42px;
+      }
+
+      &-date,
+      &-time {
+        @include small-tablet {
+          display: flex;
+          align-items: center;
+          label {
+            flex: 0 0 25%;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+
+    .errorColor {
+      border-bottom: 1px solid $color-error;
+    }
+
+    input,
+    select {
+      height: 51px;
+      border: none;
+      border-bottom: 1px solid rgba($color-gray-dark, 0.16);
+      font-size: inherit;
+      padding: 10px;
+
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $color-gray-dark;
+      }
+    }
+
+    #name {
+      width: 100%;
+    }
+
+    #email {
+      width: 100%;
+    }
+
+    input[type='submit'] {
+      background-color: $color-gray-dark;
+      border: 1px solid $color-gray-dark;
+      color: $color-white;
+      line-height: 8px;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 31px 0;
+      width: 100%;
+      cursor: pointer;
+
+      &:link,
+      &:visited {
+        color: $color-white;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-white;
+        color: $color-gray-dark;
+      }
+    }
+
+    label {
+      display: block;
+      text-align: left;
+    }
+
+    &__dateBox,
+    &__timeBox {
+      @include small-tablet {
+        flex: 0 0 68%;
+      }
+    }
+
+    &__dateBox {
+      display: flex;
+      justify-content: space-between;
+
+      input:not(:last-child) {
+        flex: 0 0 27.76%;
+      }
+      input:last-child {
+        flex: 0 0 33.46%;
+      }
+    }
+
+    &__timeBox {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      input {
+        flex: 0 0 27.76%;
+      }
+
+      .m-daytime__box {
+        border-bottom: 1px solid rgba($color-gray-dark, 0.16);
+        padding: 14px;
+        flex: 0 0 33.46%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .a-arrow {
+        padding-left: 10px;
+        cursor: pointer;
+      }
+
+      .-mirror {
+        transform: scaleY(-1);
+      }
+
+      .m-daytime__options {
+        background-color: $color-white;
+        box-shadow: 0px 1px 40px 0px rgba(112, 112, 112, 0.4);
+
+        transform: translateX(10px);
+        z-index: 10;
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        padding: 20px 25px 20px 15px;
+      }
+
+      .a-tick {
+        margin-right: 10px;
+      }
+
+      .m-daytime__options-AM {
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      .m-daytime__options-PM {
+        cursor: pointer;
+      }
+
+      .-hidden {
+        opacity: 0;
+        z-index: -10;
+      }
+    }
+
+    .form__people {
+      display: flex;
+      margin-top: 42px;
+      font-weight: 700;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba($color-gray-dark, 0.16);
+      text-align: center;
+
+      .form__people-middle {
+        flex: 0 0 60%;
+      }
+
+      .plusminus {
+        flex: 0 0 20%;
+        color: $color-brown;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+
+        &:active {
+          transform: scale(1.2);
+        }
+      }
+
+      .-inactive {
+        color: rgba($color-brown, 0.1);
+      }
+    }
+  }
+
+  .-plusminusActive {
+    border-bottom: 1px solid $color-gray-dark !important;
+  }
+}

@@ -4,7 +4,7 @@ import Feature from './Feature/Feature';
 import Hightlight from './Hightlight/Hightlight';
 import Event from './Event/Event';
 import Reservation from './Reservation/Reservation';
-import Footer from './Footer/Footer';
+import Footer from '../Footer/Footer';
 
 export default function Homepage() {
   return (

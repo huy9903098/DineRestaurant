@@ -20,6 +20,8 @@ import socialTablet2 from 'Images/homepage/social-events-tablet@2x.jpg';
 import socialDesktop from 'Images/homepage/social-events-desktop.jpg';
 import socialDesktop2 from 'Images/homepage/social-events-desktop@2x.jpg';
 
+import { Link } from 'react-router-dom';
+
 import './Event.scss';
 
 export default function Event() {
@@ -103,9 +105,9 @@ export default function Event() {
           </div>
         </div>
 
-        <a href="booking.html" className="a-btnCta -btnBlack">
+        <Link to="/booking" className="a-btnCta -btnBlack">
           Book a table
-        </a>
+        </Link>
 
         <ul className="m-events__nav">
           <li className="m-events__item -active">Family Gathering</li>

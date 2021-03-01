@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import logo from 'Images/logo.svg';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -11,7 +12,9 @@ export default function Header() {
         Experience our seasonal menu in beautiful country surroundings. Eat the
         freshest produce from the comfort of our farmhouse.
       </p>
-      <a class="a-btnCta -btnTransparent">Book a table</a>
+      <Link to="/booking" className="a-btnCta -btnTransparent">
+        Book a table
+      </Link>
     </header>
   );
 }
