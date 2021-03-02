@@ -51,15 +51,18 @@
       .-h2 {
         margin-top: 22px;
         margin-bottom: 14px;
+        text-align: center;
 
         @include small-tablet {
           width: 50%;
           margin: 27px auto 14px auto;
+          text-align: left;
         }
 
         @include small-desktop {
           margin: 171px 0 16px 0;
           width: 85%;
+          text-align: left;
         }
 
         &::before {
@@ -75,6 +78,7 @@
 
       .paragraph {
         margin-bottom: 80px; //goes perfectly as bottom margin of the section
+        text-align: center;
 
         @include small-tablet {
           width: 60%;
@@ -85,6 +89,7 @@
         @include small-desktop {
           margin: 0;
           width: 80%;
+          text-align: left;
         }
       }
 
