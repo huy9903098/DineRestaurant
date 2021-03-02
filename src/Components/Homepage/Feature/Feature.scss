@@ -38,11 +38,7 @@
     &__imgBox {
       position: relative;
       width: 100%;
-      @media only screen and (min-width: 55em) {
-        max-width: 655px;
-        margin-right: auto;
-        margin-left: auto;
-      }
+      text-align: center;
 
       img {
         box-shadow: $blured-shadow;
